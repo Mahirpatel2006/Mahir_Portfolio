@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx", "components/ThreeScene.jsx", "components/Navbar.jsx", "components/ButtonWithHoverEffect.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.tsx", "components/ThreeScene.jsx", "components/Navbar.jsx", "components/ButtonWithHoverEffect.tsx"],
   "exclude": ["node_modules"]
 }
