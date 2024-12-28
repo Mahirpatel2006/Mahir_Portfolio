@@ -43,10 +43,11 @@ export default function AboutMe() {
       ></span>
       <span className="relative z-10 block px-6 py-3 rounded-2xl bg-neutral-950">
         <div className="relative z-10 flex items-center space-x-3">
-          <span
-            className="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-emerald-300"
-            >My Projects</span
-          >
+        <span
+  className="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-emerald-300"
+>
+  My Projects
+</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -222,8 +223,8 @@ function InspirationalQuote() {
       >
         <FaQuoteLeft className="text-4xl text-gray-500 mb-4 mx-auto" />
         <blockquote className="text-2xl font-italic text-gray-300">
-          "Why take the easy route when you can debug your way to glory? Challenges make the victory sweeter (and the coffee stronger)."
-        </blockquote>
+  &quot;Why take the easy route when you can debug your way to glory? Challenges make the victory sweeter (and the coffee stronger).&quot;
+</blockquote>
       </motion.div>
     </motion.section>
   )

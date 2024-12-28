@@ -11,11 +11,21 @@ const Homepage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 7000) // 10 seconds
+    // Check if the user has already visited the page
+    const hasVisited = localStorage.getItem('hasVisited')
 
-    return () => clearTimeout(timer)
+    if (hasVisited) {
+      // If the user has visited before, skip the loading screen
+      setIsLoading(false)
+    } else {
+      // If this is the user's first visit, show the loading screen
+      const timer = setTimeout(() => {
+        setIsLoading(false)
+        localStorage.setItem('hasVisited', 'true') // Mark as visited
+      }, 7000) // Adjust the timeout as needed
+
+      return () => clearTimeout(timer)
+    }
   }, [])
 
   return (
@@ -24,20 +34,14 @@ const Homepage: React.FC = () => {
         <LoadingScreen />
       ) : (
         <div>
-      {/* Uncomment the Navbar */}
-      <FluidCursor/>
-      <Navbar/>
-      
-      {/* Add the GitHub button with hover effect */}
-      <ButtonWithHoverEffect />
-         
-      {/* Add ScrollingEffect if needed */}
-      <ScrollingEffect />
-      
-    </div>
-  )}
-  </>
-)
+          <FluidCursor />
+          <Navbar />
+          <ButtonWithHoverEffect />
+          <ScrollingEffect />
+        </div>
+      )}
+    </>
+  )
 }
 
-export default Homepage;
+export default Homepage

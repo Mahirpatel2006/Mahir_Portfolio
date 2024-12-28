@@ -6,15 +6,15 @@ const ContactHero = () => {
   return (
     <div className="max-w-xl space-y-8">
       <h1 className="text-5xl font-bold leading-tight text-gray-800">
-        Let's Create Something
+        Let&apos;s Create Something
         <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
           Amazing Together
         </span>
       </h1>
       
       <p className="text-lg text-gray-600">
-        I'm always excited to connect with new people and discuss potential collaborations. 
-        Whether you have a project in mind or just want to say hello, I'd love to hear from you.
+        I&apos;m always excited to connect with new people and discuss potential collaborations. 
+        Whether you have a project in mind or just want to say hello, I&apos;d love to hear from you.
       </p>
 
       <div className="space-y-4">

@@ -14,21 +14,21 @@ export default function Sphere() {
         title="3D Sphere"
         className="absolute inset-0 w-full h-full border-none filter blur-sm"
       />
-      <Navbar/>
+      <Navbar />
       
       {/* Left content - Added responsive positioning */}
       <div className='absolute pointer-events-none left-4 md:left-16 top-8 md:top-16 flex px-4 md:px-0'>
         <div className="max-w-xl space-y-6 md:space-y-8">
           <h1 className="text-3xl md:text-5xl font-bold leading-tight text-white">
-            Let's Create Something
+            Let&apos;s Create Something
             <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
               Amazing Together
             </span>
           </h1>
 
           <p className="text-base md:text-lg text-zinc-50">
-            I'm always excited to connect with new people and discuss potential collaborations.
-            Whether you have a project in mind or just want to say hello, I'd love to hear from you.
+            I&apos;m always excited to connect with new people and discuss potential collaborations.
+            Whether you have a project in mind or just want to say hello, I&apos;d love to hear from you.
           </p>
 
           <div className="space-y-4">
@@ -74,9 +74,8 @@ export default function Sphere() {
 
       {/* Contact Form - Added responsive positioning */}
       <div className="absolute left-4 md:left-3/4 top-[450px] md:top-20 w-[calc(100%-2rem)] md:w-auto">
-        <ContactForm/>
+        <ContactForm />
       </div>
-
     </div>
   );
 }
