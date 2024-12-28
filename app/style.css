@@ -1,0 +1,91 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background-color: #1e1e1e; /* Dark theme background */
+  color: white;
+}
+
+.cont {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.7); /* Foggy effect */
+}
+
+.app {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.app__bgimg {
+  position: absolute;
+  top: 0;
+  left: -2.5%;
+  width: 105%;
+  height: 100%;
+  transition: transform 3.5s 770ms;
+  filter: blur(6px); /* Foggy effect on the background */
+}
+
+.app__bgimg-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.app__bgimg-image--1 {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city22222.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.app__bgimg-image--2 {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/forest.jpg") center center no-repeat;
+  background-size: cover;
+  opacity: 0;
+}
+
+.app__text {
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.app__text-line {
+  transition: transform 1500ms 400ms, opacity 750ms 500ms;
+}
+
+.app__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 3s cubic-bezier(0.6, 0.13, 0.31, 1.02);
+}
+
+.app__img img {
+  min-width: 100%;
+}
+
+.pages__item {
+  border: 3px solid #fff;
+  cursor: pointer;
+}
+
+.icon-link img {
+  width: 50px;
+}
