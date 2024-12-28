@@ -5,9 +5,12 @@ import { motion } from 'framer-motion'
 import { Typewriter } from 'react-simple-typewriter'
 import { FaGraduationCap, FaLaptopCode, FaLightbulb, FaFootballBall, FaQuoteLeft } from 'react-icons/fa'
 import AnimatedBackground from '@/components/AnimatedBackground'
-import { div } from 'framer-motion/client'
 import Navbar from '@/components/Navbar'
-import FluidCursor from "@/components/FluidCursor"; 
+import FluidCursor from "@/components/FluidCursor"
+
+// Type definitions for props if needed
+type Skill = string;
+
 export default function AboutMe() {
   const [mounted, setMounted] = useState(false)
 
@@ -18,56 +21,49 @@ export default function AboutMe() {
   if (!mounted) return null
 
   return (
-
-<div>
-    <Navbar/>
-    <FluidCursor/>
-    <div className="relative min-h-screen bg-black text-white p-8 overflow-hidden">
-      <AnimatedBackground />
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <HeroSection />
-        <AcademicBackground />
-        <SkillsExpertise />
-        <PassionForInnovation />
-        <BeyondTechnology />
-        <InspirationalQuote />
-       
-
-  <div className="relative group m-11 left-3/4">
-  <a href="/Projects">
-    <button
-      className="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-emerald-900 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-emerald-600 md:relative right-36"
-    >
-      <span
-        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500 via-cyan-500 to-sky-600 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-      ></span>
-      <span className="relative z-10 block px-6 py-3 rounded-2xl bg-neutral-950">
-        <div className="relative z-10 flex items-center space-x-3">
-        <span
-  className="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-emerald-300"
->
-  My Projects
-</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-7 h-7 transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-emerald-300"
-          >
-            <path
-              d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-            ></path>
-          </svg>
+    <div className="relative">
+      <Navbar />
+      <FluidCursor />
+      <div className="relative min-h-screen bg-black text-white p-8 overflow-hidden">
+        <AnimatedBackground />
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <HeroSection />
+          <AcademicBackground />
+          <SkillsExpertise />
+          <PassionForInnovation />
+          <BeyondTechnology />
+          <InspirationalQuote />
+          
+          <div className="relative group m-11 md:left-3/4">
+            <a href="/Projects">
+              <button
+                className="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-emerald-900 transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-emerald-600 md:relative md:right-36"
+                type="button"
+              >
+                <span
+                  className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500 via-cyan-500 to-sky-600 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                />
+                <span className="relative z-10 block px-6 py-3 rounded-2xl bg-neutral-950">
+                  <div className="relative z-10 flex items-center space-x-3">
+                    <span className="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-emerald-300">
+                      My Projects
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-7 h-7 transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-emerald-300"
+                    >
+                      <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
+                    </svg>
+                  </div>
+                </span>
+              </button>
+            </a>
+          </div>
         </div>
-      </span>
-    </button>
-    </a>
-  </div>
-</div>
-
       </div>
     </div>
-    
   )
 }
 
@@ -118,14 +114,14 @@ function AcademicBackground() {
         Academic and Professional Background
       </motion.h2>
       <p className="text-gray-300 leading-relaxed">
-        Hailing from Visnagar, I completed my 12th grade with distinction (76%) from PM Shree Jawahar Navodaya Vidyalaya. Currently, I'm pursuing a B.Tech degree in Computer Engineering at Sankalchand Patel University. My journey in technology has equipped me with a strong foundation in programming and problem-solving, driving my passion for innovation and development. I'm actively seeking an internship opportunity to further enhance my skills and contribute meaningfully to impactful projects.
+        Hailing from Visnagar, I completed my 12th grade with distinction (76%) from PM Shree Jawahar Navodaya Vidyalaya. Currently, I am pursuing a B.Tech degree in Computer Engineering at Sankalchand Patel University. My journey in technology has equipped me with a strong foundation in programming and problem-solving, driving my passion for innovation and development. I am actively seeking an internship opportunity to further enhance my skills and contribute meaningfully to impactful projects.
       </p>
     </motion.section>
   )
 }
 
 function SkillsExpertise() {
-  const skills = ['JavaScript', 'Python', 'C', 'Java', 'HTML',"css", 'React', 'Next.js', 'Bootstrap', 'Node.js', 'MongoDB', 'Git']
+  const skills: Skill[] = ['JavaScript', 'Python', 'C', 'Java', 'HTML', 'CSS', 'React', 'Next.js', 'Bootstrap', 'Node.js', 'MongoDB', 'Git']
 
   return (
     <motion.section
@@ -143,7 +139,7 @@ function SkillsExpertise() {
         Skills and Expertise
       </motion.h2>
       <div className="flex flex-wrap gap-4">
-        {skills.map((skill, index) => (
+        {skills.map((skill) => (
           <motion.div
             key={skill}
             className="bg-gray-800 px-4 py-2 rounded-full"
@@ -225,8 +221,8 @@ function InspirationalQuote() {
         <blockquote className="text-2xl font-italic text-gray-300">
   &quot;Why take the easy route when you can debug your way to glory? Challenges make the victory sweeter (and the coffee stronger).&quot;
 </blockquote>
+
       </motion.div>
     </motion.section>
   )
 }
-
