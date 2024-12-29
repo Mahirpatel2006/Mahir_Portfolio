@@ -1,7 +1,7 @@
 .wrapper {
   position: relative;
   width: 100%;
-  height: 100vh; /* Ensure enough scrollable height for long-duration animations */
+  height: 100vh;
   overflow: hidden;
   z-index: 1;
 }
@@ -15,7 +15,7 @@
 
 .content .section {
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
 }
 
 .section.hero {
@@ -25,25 +25,21 @@
   background-size: cover;
 }
 
-.section.gradientPurple {
-  background: linear-gradient(180deg, #6a0dad, #000);
-}
-
 .imageContainer {
   width: 100%;
   height: 100vh;
-  position: fixed; /* Fix the imageContainer to the viewport */
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 2; /* Ensure it overlays the sections */
+  z-index: 2;
   overflow: hidden;
 }
 
 .imageContainer img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  transform-origin: 50% 50%; /* Center the zoom effect */
+  object-fit: cover;
+  transform-origin: 50% 50%;
 }
 
 .threeSceneContainer {
@@ -52,7 +48,42 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  opacity: 0; /* Initially hidden */
-  z-index: 3; /* Ensures ThreeScene is above other content */
-  pointer-events: none; /* Prevents interaction until it's visible */
+  opacity: 0;
+  z-index: 3;
+  pointer-events: none;
 }
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .wrapper {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .imageContainer {
+    position: absolute;
+    height: 100%;
+  }
+
+  .threeSceneContainer {
+    position: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  .content .section {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .imageContainer img {
+    transform-origin: center center;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    overflow-x: hidden;
+  }
+}
+

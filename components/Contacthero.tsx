@@ -1,20 +1,24 @@
 "use client";
-import React from 'react';
-import { Mail, MessageSquare, Clock } from 'lucide-react';
+import React from "react";
+import { Mail, MessageSquare, Clock } from "lucide-react";
 
 const ContactHero = () => {
   return (
-    <div className="max-w-xl space-y-8">
+    <div className="relative group max-w-xl space-y-8">
+      {/* Blur background effect */}
+      <div className="absolute inset-0 z-[-1] transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100 group-hover:blur-lg bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg"></div>
+
       <h1 className="text-5xl font-bold leading-tight text-gray-800">
         Let&apos;s Create Something
         <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
           Amazing Together
         </span>
       </h1>
-      
+
       <p className="text-lg text-gray-600">
-        I&apos;m always excited to connect with new people and discuss potential collaborations. 
-        Whether you have a project in mind or just want to say hello, I&apos;d love to hear from you.
+        I&apos;m always excited to connect with new people and discuss potential
+        collaborations. Whether you have a project in mind or just want to say
+        hello, I&apos;d love to hear from you.
       </p>
 
       <div className="space-y-4">

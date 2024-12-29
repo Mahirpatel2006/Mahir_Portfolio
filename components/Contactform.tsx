@@ -30,9 +30,9 @@ const ContactForm = () => {
 
   return (
     <div className="px-4 mx-auto relative min-w-full w-full max-w-lg">
-      <div className="absolute -left-4 top-0 h-72 w-72 animate-blob rounded-full bg-purple-300 opacity-70 mix-blend-multiply blur-xl filter"></div>
+      {/* <div className="absolute -left-4 top-0 h-72 w-72 animate-blob rounded-full bg-purple-300 opacity-70 mix-blend-multiply blur-xl filter"></div>
       <div className="absolute -bottom-8 right-4 h-72 w-72 animate-blob animation-delay-2000 rounded-full bg-yellow-300 opacity-70 mix-blend-multiply blur-xl filter"></div>
-      <div className="absolute -right-4 top-0 h-72 w-72 animate-blob animation-delay-4000 rounded-full bg-pink-300 opacity-70 mix-blend-multiply blur-xl filter"></div>
+      <div className="absolute -right-4 top-0 h-72 w-72 animate-blob animation-delay-4000 rounded-full bg-pink-300 opacity-70 mix-blend-multiply blur-xl filter"></div> */}
       
       <div className="relative">
         <div className="m-8 rounded-2xl bg-transparent p-8 shadow-xl backdrop-blur-lg">
@@ -42,7 +42,8 @@ const ContactForm = () => {
                 type="text"
                 name="user_name"
                 required
-                className="peer w-full border-b-2 border-gray-300 bg-transparent px-0 py-2 text-gray-900 placeholder-transparent focus:border-purple-600 focus:outline-none"
+                  autoComplete="off"
+                className="peer w-full border-b-2 border-gray-300 bg-transparent px-0 py-2 text-white placeholder-transparent focus:border-purple-600 focus:outline-none"
                 placeholder="Name"
               />
               <label className="absolute left-0 -top-3.5 text-sm text-gray-600 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-purple-600">
@@ -51,13 +52,14 @@ const ContactForm = () => {
             </div>
 
             <div className="group relative">
-              <input
-                type="email"
-                name="user_email"
-                required
-                className="peer w-full border-b-2 border-gray-300 bg-transparent px-0 py-2 text-white placeholder-transparent focus:border-purple-600 focus:outline-none"
-                placeholder="Email"
-              />
+            <input
+  type="email"
+  name="user_email"
+  required
+  autoComplete="off" // Prevent browser suggestions
+  className="peer w-full border-b-2 border-gray-300 bg-transparent px-0 py-2 text-white placeholder-transparent focus:border-purple-600 focus:outline-none"
+  placeholder="Email"
+/>
               <label className="absolute left-0 -top-3.5 text-sm text-gray-600 transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-purple-600">
                 Email
               </label>
