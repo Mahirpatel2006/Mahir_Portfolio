@@ -139,12 +139,37 @@ body {
   .keyboard {
     padding: 0 12px; /* Adjust padding for smaller screens */
   }
+  .page-container {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .keyboard {
+    padding: 2rem 1rem;
+  }
+
+  .m1 {
+    right: 0;
+  }
+
+  .m3 {
+    bottom: 0;
+  }
+
+  .key {
+    font-size: 12vw;
+    letter-spacing: -1vw;
+  }
+
+  .background-container {
+    position: fixed;
+  }
 }
 
 /* Add responsive adjustments for better performance on different devices */
 @media (max-width: 480px) {
   .key {
-    font-size: 12vw; /* Larger key text on smaller devices */
+    font-size: 14vw; /* Larger key text on smaller devices */
     letter-spacing: -2vw; /* Adjust spacing */
   }
 
@@ -178,3 +203,10 @@ body {
 .animate-scroll {
   animation: scroll_4013 2s linear infinite;
 }
+
+@media (max-width: 480px) {
+  .key {
+    font-size: 14vw;
+  }
+}
+
