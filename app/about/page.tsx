@@ -46,7 +46,7 @@ export default function AboutMe() {
                 <span className="relative z-10 block px-6 py-3 rounded-2xl bg-neutral-950">
                   <div className="relative z-10 flex items-center space-x-3">
                     <span className="transition-all duration-500 group-hover:translate-x-1.5 group-hover:text-emerald-300">
-                      My Projects...
+                      My Projects
                     </span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +111,7 @@ function AcademicBackground() {
         transition={{ type: "spring", stiffness: 300 }}
       >
         <FaGraduationCap className="mr-4 text-purple-500" />
-        Academic and Professional Background
+        Academic and Professional Background.....
       </motion.h2>
       <p className="text-gray-300 leading-relaxed">
         Hailing from Visnagar, I completed my 12th grade with distinction (76%) from PM Shree Jawahar Navodaya Vidyalaya. Currently, I am pursuing a B.Tech degree in Computer Engineering at Sankalchand Patel University. My journey in technology has equipped me with a strong foundation in programming and problem-solving, driving my passion for innovation and development. I am actively seeking an internship opportunity to further enhance my skills and contribute meaningfully to impactful projects.
