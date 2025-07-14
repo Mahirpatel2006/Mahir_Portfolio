@@ -111,7 +111,7 @@ function AcademicBackground() {
         transition={{ type: "spring", stiffness: 300 }}
       >
         <FaGraduationCap className="mr-4 text-purple-500" />
-        Academic and Professional Background.....
+        Academic and Professional Background
       </motion.h2>
       <p className="text-gray-300 leading-relaxed">
         Hailing from Visnagar, I completed my 12th grade with distinction (76%) from PM Shree Jawahar Navodaya Vidyalaya. Currently, I am pursuing a B.Tech degree in Computer Engineering at Sankalchand Patel University. My journey in technology has equipped me with a strong foundation in programming and problem-solving, driving my passion for innovation and development. I am actively seeking an internship opportunity to further enhance my skills and contribute meaningfully to impactful projects.
